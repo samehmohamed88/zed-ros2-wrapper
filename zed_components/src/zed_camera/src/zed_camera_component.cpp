@@ -1328,15 +1328,15 @@ void ZedCamera::getPosTrackingParams()
   std::string pos_trk_mode;
   getParam("pos_tracking.pos_tracking_mode", pos_trk_mode, pos_trk_mode);
   if (pos_trk_mode == "QUALITY") {
-    mPosTrkMode = sl::POSITIONAL_TRACKING_MODE::QUALITY;
+    mPosTrkMode = sl::POSITIONAL_TRACKING_MODE::GEN_2;
   } else if (pos_trk_mode == "STANDARD") {
-    mPosTrkMode = sl::POSITIONAL_TRACKING_MODE::STANDARD;
+    mPosTrkMode = sl::POSITIONAL_TRACKING_MODE::GEN_1;
   } else {
     RCLCPP_WARN_STREAM(
       get_logger(),
       "'pos_tracking.pos_tracking_mode' not valid ('" << pos_trk_mode <<
         "'). Using default value.");
-    mPosTrkMode = sl::POSITIONAL_TRACKING_MODE::QUALITY;
+    mPosTrkMode = sl::POSITIONAL_TRACKING_MODE::GEN_2;
   }
   RCLCPP_INFO_STREAM(
     get_logger(), " * Positional tracking mode: " << sl::toString(

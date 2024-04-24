@@ -299,7 +299,7 @@ private:
   bool mPoseSmoothing = false;
   bool mAreaMemory = true;
   std::string mAreaMemoryDbPath = "";
-  sl::POSITIONAL_TRACKING_MODE mPosTrkMode = sl::POSITIONAL_TRACKING_MODE::QUALITY;
+  sl::POSITIONAL_TRACKING_MODE mPosTrkMode = sl::POSITIONAL_TRACKING_MODE::GEN_2;
   bool mImuFusion = true;
   bool mFloorAlignment = false;
   bool mTwoDMode = false;
